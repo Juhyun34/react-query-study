@@ -86,4 +86,160 @@ body {
   .delete-btn:hover {
     color: #b91c1c;
   }
+
+  .delete-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .todo-input button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .todo-input input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  /* 통계 스타일 */
+  .todo-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-radius: 0.75rem;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3b82f6;
+  }
+
+  /* 필터 버튼 스타일 */
+  .filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
+
+  .filter-buttons button {
+    padding: 0.5rem 1rem;
+    border: 2px solid #e5e7eb;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    color: #6b7280;
+  }
+
+  .filter-buttons button:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+  }
+
+  .filter-buttons button.active {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+  }
+
+  /* 로딩 및 에러 상태 */
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    color: #6b7280;
+    font-size: 1.125rem;
+  }
+
+  .loading-indicator {
+    text-align: center;
+    padding: 0.5rem;
+    color: #3b82f6;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+
+  .error {
+    text-align: center;
+    padding: 2rem;
+    color: #ef4444;
+  }
+
+  .error p {
+    margin-bottom: 1rem;
+  }
+
+  .retry-btn {
+    padding: 0.5rem 1rem;
+    background-color: #ef4444;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+
+  .retry-btn:hover {
+    background-color: #dc2626;
+  }
+
+  /* Todo Item 스타일 개선 */
+  .todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s;
+    gap: 0.75rem;
+  }
+
+  .todo-list li.completed {
+    background-color: #f0fdf4;
+  }
+
+  .todo-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+    accent-color: #10b981;
+  }
+
+  .todo-checkbox:disabled {
+    cursor: not-allowed;
+  }
+
+  .todo-list li span {
+    flex: 1;
+    text-align: left;
+  }
+
+  .completed-text {
+    text-decoration: line-through;
+    color: #6b7280;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: #9ca3af;
+    font-style: italic;
+  }
   

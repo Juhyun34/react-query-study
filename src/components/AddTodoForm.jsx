@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function AddTodoForm({ onAdd }) {
+export default function AddTodoForm({ onAdd, isAdding }) {
   const [title, setTitle] = useState("");
 
   const handleSubmit = (e) => {
@@ -17,8 +17,11 @@ export default function AddTodoForm({ onAdd }) {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Add a new task..."
+        disabled={isAdding}
       />
-      <button type="submit">Add</button>
+      <button type="submit" disabled={isAdding}>
+        {isAdding ? "Adding..." : "Add"}
+      </button>
     </form>
   );
 }
